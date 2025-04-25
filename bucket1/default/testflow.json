@@ -11,7 +11,37 @@
   "flowContents" : {
     "comments" : "",
     "componentType" : "PROCESS_GROUP",
-    "connections" : [ ],
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "619f5c0f-6198-363e-b278-9d7229202514",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2f768dae-34fe-3ff4-b572-42f9a2ea7ed4",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "fc2d7734-cf37-3f56-b505-123fd6c865fb",
+        "name" : "ConvertJsonToParquet",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
@@ -20,7 +50,15 @@
     "externalControllerServiceReferences" : { },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-    "funnels" : [ ],
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "619f5c0f-6198-363e-b278-9d7229202514",
+      "position" : {
+        "x" : 780.8166351318359,
+        "y" : 316.8999938964844
+      }
+    } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
     "labels" : [ ],
@@ -51,8 +89,8 @@
       "name" : "ConvertJsonToParquet",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 658.0,
-        "y" : 162.1999969482422
+        "x" : 616.0,
+        "y" : 48.0
       },
       "properties" : { },
       "propertyDescriptors" : { },
