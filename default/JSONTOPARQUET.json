@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1745555924538,
+    "description" : "",
+    "identifier" : "JSONTOPARQUET",
+    "lastModifiedTimestamp" : 1745555924538,
+    "name" : "JSON_TO_PARQUET",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
