@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1746424511385,
+    "description" : "",
+    "identifier" : "kafkatodb",
+    "lastModifiedTimestamp" : 1746424511385,
+    "name" : "kafka_to_db",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
