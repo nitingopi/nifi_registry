@@ -26,7 +26,7 @@
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "06191921-e9dc-393e-ad2e-9a7330dac6a8",
-      "labelIndex" : 0,
+      "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
@@ -55,7 +55,7 @@
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "561023e9-e879-31f1-b9a6-e4a2c43eed1c",
-      "labelIndex" : 0,
+      "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
@@ -85,7 +85,7 @@
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "48f1f6b4-9c3b-3828-98ea-3b3b11ed4d8a",
-      "labelIndex" : 0,
+      "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
@@ -120,8 +120,8 @@
       "name" : "test_input",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -1064.8324133131796,
-        "y" : 579.8748319268095
+        "x" : -1032.0,
+        "y" : 560.0
       },
       "scheduledState" : "ENABLED",
       "type" : "INPUT_PORT"
@@ -156,7 +156,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -1088.0,
-        "y" : 1064.0
+        "y" : 944.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -266,8 +266,8 @@
       "name" : "AttributesToJSON",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1112.0,
-        "y" : 800.0
+        "x" : -1088.0,
+        "y" : 752.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -356,7 +356,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -496.0,
-        "y" : 808.0
+        "y" : 752.0
       },
       "properties" : {
         "character-set" : "UTF-8",
