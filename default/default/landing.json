@@ -203,6 +203,35 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "groupId" : "7664c353-ab35-3dfd-b624-cbd4e1e9cc90",
+        "id" : "9cd97d6d-f64a-3c5c-be18-8c7fe7a00979",
+        "name" : "test_input",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "43df7420-168b-37d2-8a9f-40db0bf723fd",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "2b2ee540-3181-3e65-9074-214a07dafb89",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "4ddf66dc-323d-3277-ada4-d5058aabb906",
@@ -962,7 +991,43 @@
       "x" : 0.0,
       "y" : 0.0
     },
-    "processGroups" : [ ],
+    "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7664c353-ab35-3dfd-b624-cbd4e1e9cc90",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "Test group",
+      "outputPorts" : [ ],
+      "parameterContextName" : "landing_params",
+      "position" : {
+        "x" : -208.0,
+        "y" : 1320.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min",
+      "versionedFlowCoordinates" : {
+        "branch" : "main",
+        "bucketId" : "default",
+        "flowId" : "testgroup",
+        "storageLocation" : "git@github.com:nitingopi/nifi_registry.git",
+        "version" : "a6d15c2bc4df83c2f304956de596deab79dcb431"
+      }
+    } ],
     "processors" : [ {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
@@ -1408,6 +1473,39 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
+        "artifact" : "python-extensions",
+        "group" : "org.apache.nifi",
+        "version" : "0.0.1-SNAPSHOT"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1c72de19-29cd-3516-9aa6-9a6afafdefd7",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "UpdateKafkaOffsets",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 872.0,
+        "y" : 552.0
+      },
+      "properties" : { },
+      "propertyDescriptors" : { },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "UpdateKafkaOffsets",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
         "artifact" : "nifi-update-attribute-nar",
         "group" : "org.apache.nifi",
         "version" : "2.0.0"
@@ -1705,25 +1803,74 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "python-extensions",
+        "artifact" : "nifi-update-attribute-nar",
         "group" : "org.apache.nifi",
-        "version" : "0.0.1-SNAPSHOT"
+        "version" : "2.0.0"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "1c72de19-29cd-3516-9aa6-9a6afafdefd7",
+      "identifier" : "2b2ee540-3181-3e65-9074-214a07dafb89",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateKafkaOffsets",
+      "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 872.0,
-        "y" : 552.0
+        "x" : -216.0,
+        "y" : 952.0
       },
-      "properties" : { },
-      "propertyDescriptors" : { },
+      "properties" : {
+        "sql.args.1.value" : "${uuid}",
+        "Delete Attributes Expression" : "sql\\.args\\.(?!1\\.)\\d+\\.(type|value)",
+        "Store State" : "Do not store state",
+        "canonical-value-lookup-cache-size" : "100",
+        "sql.args.1.type" : "12"
+      },
+      "propertyDescriptors" : {
+        "sql.args.1.value" : {
+          "displayName" : "sql.args.1.value",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "sql.args.1.value",
+          "sensitive" : false
+        },
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "canonical-value-lookup-cache-size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canonical-value-lookup-cache-size",
+          "sensitive" : false
+        },
+        "sql.args.1.type" : {
+          "displayName" : "sql.args.1.type",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "sql.args.1.type",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 25,
@@ -1731,7 +1878,7 @@
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "UpdateKafkaOffsets",
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -1940,88 +2087,6 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.PutEmail",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-update-attribute-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.0.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2b2ee540-3181-3e65-9074-214a07dafb89",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -216.0,
-        "y" : 952.0
-      },
-      "properties" : {
-        "sql.args.1.value" : "${uuid}",
-        "Delete Attributes Expression" : "sql\\.args\\.(?!1\\.)\\d+\\.(type|value)",
-        "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100",
-        "sql.args.1.type" : "12"
-      },
-      "propertyDescriptors" : {
-        "sql.args.1.value" : {
-          "displayName" : "sql.args.1.value",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "sql.args.1.value",
-          "sensitive" : false
-        },
-        "Delete Attributes Expression" : {
-          "displayName" : "Delete Attributes Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "Store State" : {
-          "displayName" : "Store State",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Store State",
-          "sensitive" : false
-        },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
-        "sql.args.1.type" : {
-          "displayName" : "sql.args.1.type",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "sql.args.1.type",
-          "sensitive" : false
-        },
-        "Stateful Variables Initial Value" : {
-          "displayName" : "Stateful Variables Initial Value",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ "success" ],
